@@ -1,0 +1,29 @@
+.screen{
+    font-size: 32px;
+    width: 240px;
+    height: 80px;
+    background-color: silver;
+    margin-bottom: 10px;
+    text-align: right;
+    align-content: center;
+    padding: 20px; 
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+    height: auto;
+}
+button {
+    background-color: indigo;
+    color: silver;
+    font-size: 16px;
+    width: 70px;
+    height: 70px;
+    border: 0;
+}
+.equals-btn {
+    border-top: 1px solid silver;
+    width: 100%;
+}
