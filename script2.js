@@ -36,6 +36,7 @@ const operationBtns = document.querySelectorAll(".operation-btn");
 const dotBtn = document.querySelector(".dot-btn");
 const equalsBtn = document.querySelector(".equals-btn");
 const clearBtn = document.querySelector(".clear-btn");
+const backBtn = document.querySelector(".back-btn");
 let a="", b="", op="", res = 0;
 
 function populateDisplay(value) {
@@ -106,7 +107,7 @@ dotBtn.addEventListener("click", () => {
                 populateDisplay(b);
             }
         }
-    })
+    });
 
 
 equalsBtn.addEventListener("click", () => {
@@ -125,3 +126,16 @@ clearBtn.addEventListener("click", () => {
     a = "";
     partialReset();
 })
+
+backBtn.addEventListener("click", () => {
+    if (op == "") {
+        a = a.slice(0, -1);
+        populateDisplay(a);
+    }   
+    else {
+        if(b != "")
+        b = b.slice(0, -1);
+    
+        populateDisplay(b);
+    }
+});

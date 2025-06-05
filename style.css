@@ -1,3 +1,9 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .screen{
     font-size: 32px;
     width: 240px;
@@ -6,7 +12,7 @@
     margin-bottom: 10px;
     text-align: right;
     align-content: center;
-    padding: 20px; 
+    padding: 20px;
 }
 
 .buttons {
@@ -15,6 +21,7 @@
     width: 280px;
     height: auto;
 }
+
 button {
     background-color: indigo;
     color: silver;
@@ -23,7 +30,13 @@ button {
     height: 70px;
     border: 0;
 }
+
 .equals-btn {
     border-top: 1px solid silver;
-    width: 100%;
+    flex: 3;
+}
+
+.back-btn{
+    border-top: 1px solid silver;
+    flex: 1;
 }
