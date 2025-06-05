@@ -33,6 +33,7 @@ function operate(a, op, b) {
 const screen = document.querySelector(".screen");
 const regularBtns = document.querySelectorAll(".regular-btn");
 const operationBtns = document.querySelectorAll(".operation-btn");
+const dotBtn = document.querySelector(".dot-btn");
 const equalsBtn = document.querySelector(".equals-btn");
 const clearBtn = document.querySelector(".clear-btn");
 let a="", b="", op="", res = 0;
@@ -90,6 +91,23 @@ operationBtns.forEach((button) => {
         }
     })
 });
+
+dotBtn.addEventListener("click", () => {
+        let value = dotBtn.textContent;
+        if(op == "") {
+            if(!(a.includes("."))){
+                a += value;
+                populateDisplay(a);
+            }
+        }
+        else {
+            if(!(b.includes("."))) {
+                b += value;
+                populateDisplay(b);
+            }
+        }
+    })
+
 
 equalsBtn.addEventListener("click", () => {
     if(op === "/" && b == 0) {
