@@ -133,9 +133,9 @@ backBtn.addEventListener("click", () => {
         populateDisplay(a);
     }   
     else {
-        if(b != "")
-        b = b.slice(0, -1);
-    
-        populateDisplay(b);
+        if(b != "") {
+            b = b.slice(0, -1);
+            populateDisplay(b);
+        }
     }
 });
